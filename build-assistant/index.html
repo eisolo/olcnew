@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build assistant · Olamic Cutlery</title>
+  <meta name="description" content="Pick a model, blade, steel, and finish. Nothing is ordered.">
+  <meta name="theme-color" content="#f3eee6">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Outfit:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../">
+        <span class="mark" aria-hidden="true">∞</span>
+        <span class="brand-name"><strong>OLAMIC</strong><span>Cutlery</span></span>
+      </a>
+      <nav class="nav-inline" aria-label="Primary">
+        <a href="../folding-knives/" aria-current="page">Knives</a><a href="../series/">Series</a><a href="../about/">About</a><a href="../news/">News</a><a href="../support/">Support</a><a class="btn" href="../contact/">Contact</a>
+      </nav>
+      <button class="nav-toggle" type="button" data-open-nav>Menu</button>
+    </div>
+  </header>
+  <main id="main">
+    
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><span>Home</span><span aria-hidden="true">/</span><span>Build assistant</span></nav>
+      <header class="page-head"><p class="kicker">Name the knife</p><h1>Build assistant</h1><hr class="heat"><p class="lede">The old assistant was a long catalog of finishes. This one is the short version: model, blade, steel, finish. It does not price anything and it does not order anything.</p></header>
+      <div class="assistant" id="assistant">
+        <div class="form">
+          <label>Model<select name="model"></select></label>
+          <label>Blade<select name="blade"></select></label>
+          <label>Steel<select name="steel"></select></label>
+          <label>Finish<select name="finish"></select></label>
+          <label>Anything else<textarea name="note" placeholder="Clip, backspacer, anodizing, a reference serial."></textarea></label>
+          <button class="btn" type="button" data-request>Put this in the note</button>
+        </div>
+        <aside class="summary-card">
+          <p class="kicker">This build</p>
+          <div data-summary></div>
+        </aside>
+      </div>
+      <form class="form" data-form style="margin-top:2rem">
+        
+    <div class="honeypot">
+      <label>Leave this field empty if you're human<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <label>Name<input name="name" autocomplete="name" required></label>
+    <label>Email<input name="email" type="email" autocomplete="email" required></label>
+    
+          <label>Topic<select name="topic"><option value="order">Build request</option></select></label>
+          <label>The build<textarea id="build-message" name="message" required></textarea></label>
+        
+    
+    <button class="btn" type="submit">Send note</button>
+    <p class="form-status" role="status"></p>
+    
+      </form>
+      <script type="application/json" id="assistant-data">{"models": [{"name": "Appetizer", "blades": ["Standard"], "steels": ["Shop steel"], "lock": "Non-locking", "open": "Detent"}, {"name": "Busker", "blades": ["Largo", "Semper", "Gusto", "Vampo"], "steels": ["M390", "MagnaCut"], "lock": "Frame lock", "open": "Front flipper"}, {"name": "Whippersnapper", "blades": ["Wharncliffe", "Wharnfoot", "Sheepsfoot"], "steels": ["20CV", "CTS-XHP", "S90V"], "lock": "Frame lock", "open": "Front flipper"}, {"name": "Whippersnapper Bolsterlock", "blades": ["Wharncliffe", "Sheepsfoot"], "steels": ["CTS-XHP", "S90V", "Damasteel"], "lock": "Bolster lock", "open": "Front flipper"}, {"name": "Gambit", "blades": ["Gambit profile"], "steels": ["S30V"], "lock": "Liner lock", "open": "Flipper"}, {"name": "Wayfarer Compact", "blades": ["Drop point", "Compound grind"], "steels": ["CTS-XHP"], "lock": "Liner lock", "open": "Flipper or cutout"}, {"name": "Wayfarer 247", "blades": ["Drop point", "Harpoon", "Sheepscliffe", "Tanto", "Cutlass", "Purist", "Wharncliffe", "Mouflon", "Bowie"], "steels": ["M390", "S90V", "CTS-XHP", "Elmax", "Damasteel"], "lock": "Frame lock", "open": "Rear flipper"}, {"name": "Aura", "blades": ["Clip point", "Drop point"], "steels": ["20CV"], "lock": "Button lock", "open": "Automatic"}, {"name": "Swish", "blades": ["Swish slicer"], "steels": ["Elmax", "Damasteel"], "lock": "Frame lock", "open": "Rear flipper"}, {"name": "Rainmaker", "blades": ["Drop point", "Harpoon"], "steels": ["M390"], "lock": "Frame lock", "open": "Rear flipper"}, {"name": "Rainmaker Classic", "blades": ["Drop point", "Harpoon", "Compound harpoon"], "steels": ["CTS-204P", "CTS-XHP"], "lock": "Liner lock", "open": "Flipper"}, {"name": "Wayfarer Classic", "blades": ["Drop point", "Harpoon", "Sheepscliffe", "Tanto"], "steels": ["CTS-204P", "S35VN", "CTS-XHP"], "lock": "Liner lock", "open": "Flipper"}, {"name": "Soloist", "blades": ["Scout", "Agent"], "steels": ["M390"], "lock": "Frame lock", "open": "Flipper or thumbstud"}, {"name": "Silhouette", "blades": ["Chef"], "steels": ["MagnaCut"], "lock": "Fixed blade", "open": "Kitchen"}], "finishes": ["Stonewash", "Satin", "Matte", "Two-tone", "PVD stonewash", "Acid Rain", "Kinetic Rain", "Kinetic Rainforest", "Kinetic Earth", "Molten", "Frosty", "Antique Entropic", "Orange peel", "Seabed", "Jeweled"]}</script>
+    </div>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="mark" aria-hidden="true">∞</p>
+        <p>Olamic Cutlery, Inc.<br>650 S Bridge St, Suite A<br>Visalia, CA 93277</p>
+        <p><a href="mailto:team@olamiccutlery.com">team@olamiccutlery.com</a><br>
+        <a href="mailto:support@olamiccutlery.com">support@olamiccutlery.com</a></p>
+      </div>
+      <div><h2>The bench</h2><ul><li><a href="../how-to-order/">How to order</a></li>
+<li><a href="../build-assistant/">Build assistant</a></li>
+<li><a href="../half-baked/">Half baked builds</a></li>
+<li><a href="../warranty/">Warranty and spa</a></li>
+<li><a href="../trade-in/">Trade-in</a></li>
+<li><a href="../upgrade/">Upgrades</a></li>
+<li><a href="../service/">Service</a></li></ul></div><div><h2>Company</h2><ul><li><a href="../about/">About</a></li>
+<li><a href="../news/">News</a></li>
+<li><a href="../reviews/">Reviews</a></li>
+<li><a href="../dealers/">Dealers</a></li>
+<li><a href="../become-a-dealer/">Become a dealer</a></li>
+<li><a href="../trade-shows/">Trade shows</a></li>
+<li><a href="../contact/">Contact</a></li></ul></div><div><h2>More</h2><ul><li><a href="../hand-carved/">Hand carved series</a></li>
+<li><a href="../halloween/">Halloween</a></li>
+<li><a href="../support/">Support</a></li>
+<li><a href="../fine-print/">Fine print</a></li></ul></div>
+    </div>
+    <div class="wrap footer-note">
+      <p>Never the same. Serialized knives, lifetime warranty, spa service.</p>
+      <p>Preview site, 2026. Forms stay in the browser and do not place an order.</p>
+    </div>
+  </footer>
+  <dialog id="nav-dialog" aria-label="Menu">
+    <nav class="dialog-nav">
+      <button class="close-nav" type="button">Close</button>
+      <a href="../folding-knives/" aria-current="page">Knives</a><a href="../series/">Series</a><a href="../about/">About</a><a href="../news/">News</a><a href="../support/">Support</a><a href="../contact/">Contact</a>
+    </nav>
+  </dialog>
+  <dialog id="lightbox" aria-label="Photograph">
+    <div class="lightbox-bar">
+      <button type="button" data-prev>Previous</button>
+      <button type="button" data-next>Next</button>
+      <button type="button" data-close>Close</button>
+    </div>
+    <figure>
+      <img alt="" width="1200" height="800">
+      <figcaption></figcaption>
+    </figure>
+  </dialog>
+  <script src="../js/site.js" defer></script>
+</body>
+</html>
